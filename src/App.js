@@ -11,7 +11,8 @@ import * as api from "./utils/api";
 
 class App extends Component {
   state = {
-    topics: []
+    topics: [],
+    articles: []
   };
   render() {
     const { topics } = this.state;
@@ -21,7 +22,9 @@ class App extends Component {
         <Menu topics={topics} />
         <Search />
         <Router className="results">
-          <Articles path="/" topic={topics} />
+          <Articles path="/" />
+          <Articles path="/topics/:topic/" />
+          <Articles path='/articles/article_id'/>
         </Router>
         <Slogin />
         <Footer />
@@ -33,7 +36,6 @@ class App extends Component {
   }
   fetchTopics = () => {
     api.getTopics().then(topics => {
-      console.log(topics);
       this.setState({ topics });
     });
   };

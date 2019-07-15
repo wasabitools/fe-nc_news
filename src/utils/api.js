@@ -7,6 +7,13 @@ export const getTopics = async () => {
   return data.topics;
 };
 
-// export const getArticles= async ()=>{
-
-// }
+export const getArticles = async topic => {
+if (topic){
+  let { data } = await axios.get(`${BASE_URL}/articles?${topic}`)
+  return data.articles;
+}
+if (!topic){
+  let { data } = await axios.get(`${BASE_URL}/articles`)
+  return data.articles;
+  };
+}
