@@ -1,0 +1,10 @@
+.header h1 {
+  font-family: "Quattrocento Sans", sans-serif;
+  grid-area: header;
+  color: #cd4303;
+  font-size: 4em;
+  text-align: left;
+  margin: 0;
+  border-bottom: solid 0.5px #cd4303;
+  padding-left: 3%;
+}

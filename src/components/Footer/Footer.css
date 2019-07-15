@@ -1,0 +1,30 @@
+.footer {
+  color: #bcb4ba;
+  grid-area: footer;
+  font-size: 1em;
+  font-family: "Quattrocento Sans", sans-serif;
+  text-align: justify;
+  line-height: 2em;
+  border-top: solid 0.25px #bcb4ba;
+}
+.footer h5 {
+  margin: 0;
+  font-size: 1em;
+  padding-top: 1%;
+  padding-left: 1%;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer h5 a:visited {
+  color: #cd4303;
+}
+.footer h6 {
+  margin: 0;
+  text-align: right;
+  font-size: 1em;
+  padding-right: 1%;
+}
+.footer h6 a:visited {
+  color: #cd4303;
+}

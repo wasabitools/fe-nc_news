@@ -1,0 +1,49 @@
+.menu {
+  grid-area: menu;
+  text-align: center;
+  margin: 0;
+  padding-left: 3%;
+}
+.link {
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-top: 0;
+  padding-top: 1.5%;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #a1a4b2;
+  margin: 0;
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+
+.link {
+  float: left;
+  color: #373940;
+}
+#home {
+  padding-left: 1%;
+  padding-right: 3%;
+}
+
+#cooking {
+  padding-left: 1%;
+  padding-right: 3%;
+}
+#coding {
+  padding-left: 1%;
+  padding-right: 3%;
+}
+#football {
+  padding-left: 1%;
+  padding-right: 3%;
+}

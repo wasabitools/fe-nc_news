@@ -1,0 +1,27 @@
+.slogin {
+  grid-area: login;
+  text-align: right;
+  margin: 0;
+  padding-right: 25%;
+  border-bottom: solid 0.5px #cd4303;
+}
+
+.slogin button {
+  border: none;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-top: 0;
+  padding-top: 1%;
+  font-size: 1em;
+}
+
+.slogin button:hover {
+  color: #848897;
+  transform: scale(1.3);
+  transition: 0.8s;
+}

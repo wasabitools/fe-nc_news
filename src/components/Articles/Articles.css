@@ -1,0 +1,19 @@
+main {
+  border: solid green;
+  /* grid-area: articles; */
+  background-color: #f9ffff;
+  text-align: center;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  overflow-y: scroll;
+}
+
+main ul {
+  list-style: none;
+}
+
+main ul li:hover {
+  cursor: pointer;
+  color: #a1a4b2;
+  transition: 1s;
+}
