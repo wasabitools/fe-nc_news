@@ -1,15 +1,13 @@
 main {
-  border: solid green;
-  /* grid-area: articles; */
   background-color: #f9ffff;
   text-align: center;
   color: #373940;
   font-family: "Quattrocento Sans", sans-serif;
-  overflow-y: scroll;
 }
 
 main ul {
   list-style: none;
+  overflow-y: scroll;
 }
 
 main ul li:hover {

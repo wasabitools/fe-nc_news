@@ -29,21 +29,7 @@
 .link {
   float: left;
   color: #373940;
-}
-#home {
-  padding-left: 1%;
   padding-right: 3%;
-}
-
-#cooking {
-  padding-left: 1%;
-  padding-right: 3%;
-}
-#coding {
-  padding-left: 1%;
-  padding-right: 3%;
-}
-#football {
-  padding-left: 1%;
-  padding-right: 3%;
+  margin-right: 2%;
+  text-transform: capitalize;
 }
