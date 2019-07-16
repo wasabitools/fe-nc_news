@@ -18,18 +18,38 @@ h2 {
   margin-bottom: 1%;
 }
 .sort {
+  font-family: "Righteous", cursive;
   text-align: right;
   background-color: #f9ffff;
   cursor: pointer;
+  padding-left: 50%;
 }
 
 .sort option {
-  font-family: "Dosis", sans-serif;
+  font-family: "Righteous", cursive;
+  font-size: 1em;
 }
 .sort option:hover {
-  font-family: "Dosis", sans-serif;
+  background-color: #cd4303;
 }
 
+button {
+  border: none;
+  background-color: #f9ffff;
+  cursor: pointer;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  margin-top: 2%;
+  margin-left: 1%;
+  border-radius: 25%;
+}
+button:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  background-color: #a1a4b2;
+}
 .articleList {
   overflow-y: scroll;
 }

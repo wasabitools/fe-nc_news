@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header">
-      <h1>NC News</h1>
+      <h1>&lt; NC News &#47;&gt;</h1>
     </div>
   );
 };
