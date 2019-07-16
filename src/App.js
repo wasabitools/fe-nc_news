@@ -7,12 +7,14 @@ import Menu from "./components/Menu/Menu";
 import Search from "./components/Search/Search";
 import Slogin from "./components/Slogin/Slogin";
 import Articles from "./components/Articles/Articles";
+import ArticleById from "./components/Articles/ArticleById";
 import * as api from "./utils/api";
 
 class App extends Component {
   state = {
     topics: [],
-    articles: []
+    articles: [],
+    comments: []
   };
   render() {
     const { topics } = this.state;
@@ -24,7 +26,7 @@ class App extends Component {
         <Router className="results">
           <Articles path="/" />
           <Articles path="/topics/:topic/" />
-          <Articles path='/articles/article_id'/>
+          <ArticleById path="/articles/:article_id" />
         </Router>
         <Slogin />
         <Footer />

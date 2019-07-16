@@ -1,0 +1,38 @@
+.comments {
+  background-color: #f9ffff;
+  text-align: justify;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  padding-left: 0%;
+  margin-left: 0%;
+  margin-right: 1%;
+  font-size: 0.8em;
+  border-top: solid 0.5px #a1a4b2;
+}
+
+.comments h4 {
+  margin: 0.5%;
+}
+.comments span {
+  color: #a1a4b2;
+}
+
+.comments p {
+  text-indent: 25px;
+  text-align: justify;
+  font-weight: lighter;
+  font-family: "Lato", sans-serif;
+  font-style: oblique;
+  margin: 0.5%;
+}
+
+.comments h5 {
+  text-align: left;
+  margin: 0;
+}
+
+.comments h6 {
+  color: #626369;
+  text-align: right;
+  margin: 0;
+}

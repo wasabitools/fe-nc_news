@@ -8,12 +8,24 @@ export const getTopics = async () => {
 };
 
 export const getArticles = async topic => {
-if (topic){
-  let { data } = await axios.get(`${BASE_URL}/articles?${topic}`)
-  return data.articles;
-}
-if (!topic){
-  let { data } = await axios.get(`${BASE_URL}/articles`)
-  return data.articles;
-  };
-}
+  if (topic) {
+    let { data } = await axios.get(`${BASE_URL}/articles?${topic}`);
+    return data.articles;
+  }
+  if (!topic) {
+    let { data } = await axios.get(`${BASE_URL}/articles`);
+    return data.articles;
+  }
+};
+
+export const getArticleById = async article_id => {
+  const { data } = await axios.get(`${BASE_URL}/articles/${article_id}`);
+  return data.article[0];
+};
+
+export const getComments = async article_id => {
+  const { data } = await axios.get(
+    `${BASE_URL}/articles/${article_id}/comments`
+  );
+  return data.comments;
+};
