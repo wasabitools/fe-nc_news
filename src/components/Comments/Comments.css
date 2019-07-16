@@ -36,3 +36,21 @@
   text-align: right;
   margin: 0;
 }
+
+label {
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 1.3em;
+}
+#comment {
+  height: 2em;
+  width: 25em;
+  cursor: pointer;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 1.2em;
+}
+
+#post {
+  font-size: 1.3em;
+  font-family: "Quattrocento Sans", sans-serif;
+}

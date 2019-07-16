@@ -8,6 +8,8 @@ import Search from "./components/Search/Search";
 import Slogin from "./components/Slogin/Slogin";
 import Articles from "./components/Articles/Articles";
 import ArticleById from "./components/Articles/ArticleById";
+import CommentAdder from "./components/Comments/CommentAdder";
+import Error from "./components/Error";
 import * as api from "./utils/api";
 
 class App extends Component {
@@ -25,6 +27,8 @@ class App extends Component {
           <Articles path="/" />
           <Articles path="/topics/:topic/" />
           <ArticleById path="/articles/:article_id" />
+          <CommentAdder path="/articles/:article_id/newComment" />
+          <Error path="/error" />
         </Router>
         <Slogin />
         <Footer />

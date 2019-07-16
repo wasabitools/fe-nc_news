@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
+import { Link } from "@reach/router";
 import "../Articles/Articles.css";
 import "../Comments/Comments.css";
 
@@ -21,8 +22,10 @@ class ArticleById extends Component {
         <h4>nc/ {article.author}</h4>
         <p className="singleBody">{article.body}</p>
         <h5 className="votes">{article.votes} Votes</h5>
+        <Link to="/articles/:article_id/newComment">
+          <button id="postCommbutton">Post a comment</button>
+        </Link>
         <h6>{article.comment_count} Comments</h6>
-
         <section>
           {comments.map(comment => {
             return (
