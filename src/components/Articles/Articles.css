@@ -17,6 +17,18 @@ h2 {
   margin-top: 0;
   margin-bottom: 1%;
 }
+.sort {
+  text-align: right;
+  background-color: #f9ffff;
+  cursor: pointer;
+}
+
+.sort option {
+  font-family: "Dosis", sans-serif;
+}
+.sort option:hover {
+  font-family: "Dosis", sans-serif;
+}
 
 .articleList {
   overflow-y: scroll;

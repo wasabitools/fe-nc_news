@@ -7,15 +7,14 @@ export const getTopics = async () => {
   return data.topics;
 };
 
-export const getArticles = async topic => {
-  if (topic) {
-    let { data } = await axios.get(`${BASE_URL}/articles?${topic}`);
-    return data.articles;
-  }
-  if (!topic) {
-    let { data } = await axios.get(`${BASE_URL}/articles`);
-    return data.articles;
-  }
+export const getArticles = async (topic, sort_by) => {
+  const { data } = await axios.get(`${BASE_URL}/articles?${topic}`, {
+    params: {
+      topic,
+      sort_by
+    }
+  });
+  return data.articles;
 };
 
 export const getArticleById = async article_id => {

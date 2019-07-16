@@ -5,19 +5,23 @@ import * as api from "../../utils/api";
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    sort_by: ("created_at", "votes", "comment_count")
   };
   render() {
     const { topic } = this.props;
-    const filteredArticles = this.state.articles.filter(article => {
-      if (!topic) {
-        return this.state.articles;
-      } else return article.topic === topic;
-    });
     return (
       <main>
         <h2>{topic ? `Articles on ${topic}` : "All articles"}</h2>
-        {filteredArticles.map(article => {
+        <form className="sort" onSubmit={this.handleSubmit}>
+          <select onChange={this.handleChange}>
+            <option value="votes">Votes</option>
+            <option value="created_at">Date</option>
+            <option value="comment_count">Comment count</option>
+          </select>
+          <button type="submit">Sort them out</button>
+        </form>
+        {this.state.articles.map(article => {
           return (
             <div className="articlesList" key={article.article_id}>
               <Link id="articleLink" to={`/articles/${article.article_id}`}>
@@ -25,9 +29,7 @@ class Articles extends Component {
                 <p>nc/{article.author}</p>
                 <p>
                   Posted at{" "}
-                  {Date(article.created_at)
-                    .toString()
-                    .slice(0, 24)}
+                  {new Date(article.created_at).toString().slice(0, 24)}
                 </p>
               </Link>
             </div>
@@ -36,18 +38,32 @@ class Articles extends Component {
       </main>
     );
   }
+
+  handleChange = event => {
+    this.setState({
+      sort_by: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const { sort_by } = this.state;
+    const { topic } = this.props;
+    this.fetchArticles({ topic, sort_by });
+  };
+
   componentDidMount() {
-    if (this.props.topic) {
-      this.fetchArticles(this.props.topic);
-    } else this.fetchArticles();
+    const { topic } = this.props;
+    const { sort_by } = this.state;
+    this.fetchArticles({ topic, sort_by });
   }
   componentDidUpdate(prevProps, prevState) {
     const newTopic = this.props.topic !== prevProps.topic;
-    if (newTopic) this.fetchArticles();
+    if (newTopic) this.fetchArticles(this.props);
   }
 
-  fetchArticles = () => {
-    api.getArticles().then(articles => {
+  fetchArticles = ({ topic, sort_by }) => {
+    api.getArticles(topic, sort_by).then(articles => {
       this.setState({ articles });
     });
   };

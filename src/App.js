@@ -12,9 +12,7 @@ import * as api from "./utils/api";
 
 class App extends Component {
   state = {
-    topics: [],
-    articles: [],
-    comments: []
+    topics: []
   };
   render() {
     const { topics } = this.state;

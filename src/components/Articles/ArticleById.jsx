@@ -15,7 +15,6 @@ class ArticleById extends Component {
   };
   render() {
     const { article, comments } = this.state;
-    console.log(this.state.comments, "this");
     return (
       <div className="singleArticle">
         <h2>{article.title}</h2>
@@ -23,7 +22,8 @@ class ArticleById extends Component {
         <p className="singleBody">{article.body}</p>
         <h5 className="votes">{article.votes} Votes</h5>
         <h6>{article.comment_count} Comments</h6>
-        <p>
+
+        <section>
           {comments.map(comment => {
             return (
               <div className="comments" key={comment.comment_id}>
@@ -41,7 +41,7 @@ class ArticleById extends Component {
               </div>
             );
           })}
-        </p>
+        </section>
       </div>
     );
   }
