@@ -35,10 +35,10 @@ class CommentAdder extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { body } = this.state;
-    const { article_id, author } = this.props;
+    const { body, author } = this.state;
+    const { article_id } = this.props;
     postComment(article_id, body, author).then(({ article_id }) => {
-      navigate(`/articles/${article_id}/comments`, {
+      navigate(`/articles/${article_id}`, {
         state: { postSuccessful: true }
       }).catch(err => {
         navigate(`/error`, {

@@ -9,15 +9,19 @@ import "../Comments/Comments.css";
 class ArticleById extends Component {
   state = {
     article: {},
-    title: "",
-    body: "",
-    author: "",
-    comment_count: "",
-    votes: "",
-    comments: []
+    // title: "",
+    // body: "",
+    // author: "",
+    // comment_count: "",
+    // votes: "",
+    comments: [],
+    loading: true
   };
   render() {
-    const { article, comments, votes } = this.state;
+    const { article, comments, loading } = this.state;
+    if (loading === true) {
+      return <div>Hold on please!</div>;
+    }
     return (
       <div className="singleArticle">
         <h2>{article.title}</h2>
@@ -25,13 +29,13 @@ class ArticleById extends Component {
         <p className="singleBody">{article.body}</p>
         <Votes
           className="votesA"
-          votes={votes}
-          id={article.id}
-          section="article_id"
+          votes={article.votes}
+          id={article.article_id}
+          section="articles"
         >
           <h5 className="votes">{article.votes}</h5>
         </Votes>
-        <Link to="/articles/:article_id/newComment">
+        <Link to={`/articles/${article.article_id}/newComment`}>
           <button id="postCommbutton">Post a comment</button>
         </Link>
         <h6>{article.comment_count} Comments</h6>
@@ -46,8 +50,8 @@ class ArticleById extends Component {
                 <Votes
                   className="votesC"
                   votes={comment.votes}
-                  id={comment.id}
-                  section="comment"
+                  id={comment.comment_id}
+                  section="comments"
                 >
                   <h5>{comment.votes} Votes</h5>
                 </Votes>
@@ -73,7 +77,7 @@ class ArticleById extends Component {
   fetchArticleById = () => {
     const { article_id } = this.props;
     api.getArticleById(article_id).then(article => {
-      this.setState({ article });
+      this.setState({ article, loading: false });
     });
   };
 
