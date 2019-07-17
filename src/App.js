@@ -14,7 +14,8 @@ import * as api from "./utils/api";
 
 class App extends Component {
   state = {
-    topics: []
+    topics: [],
+    search: ""
   };
   render() {
     const { topics } = this.state;
@@ -22,7 +23,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Menu topics={topics} />
-        <Search />
+        <Search updateSearch={this.updateSearch} />
         <Router className="results">
           <Articles path="/" />
           <Articles path="/topics/:topic/" />

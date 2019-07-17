@@ -48,22 +48,22 @@ class Articles extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { sort_by } = this.state;
-    const { topic } = this.props;
-    this.fetchArticles({ topic, sort_by });
+    const { topic, author } = this.props;
+    this.fetchArticles({ topic, sort_by, author });
   };
 
   componentDidMount() {
-    const { topic } = this.props;
+    const { topic, author } = this.props;
     const { sort_by } = this.state;
-    this.fetchArticles({ topic, sort_by });
+    this.fetchArticles({ topic, sort_by, author });
   }
   componentDidUpdate(prevProps, prevState) {
     const newTopic = this.props.topic !== prevProps.topic;
     if (newTopic) this.fetchArticles(this.props);
   }
 
-  fetchArticles = ({ topic, sort_by }) => {
-    api.getArticles(topic, sort_by).then(articles => {
+  fetchArticles = ({ topic, sort_by, author }) => {
+    api.getArticles(topic, sort_by, author).then(articles => {
       this.setState({ articles });
     });
   };

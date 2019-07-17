@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
 import { Link } from "@reach/router";
+import Votes from "../Votes/Votes";
+import "../Votes/Votes.css";
 import "../Articles/Articles.css";
 import "../Comments/Comments.css";
 
@@ -15,13 +17,20 @@ class ArticleById extends Component {
     comments: []
   };
   render() {
-    const { article, comments } = this.state;
+    const { article, comments, votes } = this.state;
     return (
       <div className="singleArticle">
         <h2>{article.title}</h2>
         <h4>nc/ {article.author}</h4>
         <p className="singleBody">{article.body}</p>
-        <h5 className="votes">{article.votes} Votes</h5>
+        <Votes
+          className="votesA"
+          votes={votes}
+          id={article.id}
+          section="article_id"
+        >
+          <h5 className="votes">{article.votes}</h5>
+        </Votes>
         <Link to="/articles/:article_id/newComment">
           <button id="postCommbutton">Post a comment</button>
         </Link>
@@ -34,7 +43,14 @@ class ArticleById extends Component {
                   <span>Comment by</span> nc/{comment.author}
                 </h4>
                 <p>{comment.body}</p>
-                <h5>{comment.votes} Votes</h5>
+                <Votes
+                  className="votesC"
+                  votes={comment.votes}
+                  id={comment.id}
+                  section="comment"
+                >
+                  <h5>{comment.votes} Votes</h5>
+                </Votes>
                 <h6>
                   Posted at{" "}
                   {Date(comment.created_at)

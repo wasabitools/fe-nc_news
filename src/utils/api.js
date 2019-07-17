@@ -7,11 +7,12 @@ export const getTopics = async () => {
   return data.topics;
 };
 
-export const getArticles = async (topic, sort_by) => {
+export const getArticles = async (topic, sort_by, author) => {
   const { data } = await axios.get(`${BASE_URL}/articles?${topic}`, {
     params: {
       topic,
-      sort_by
+      sort_by,
+      author
     }
   });
   return data.articles;
@@ -29,9 +30,18 @@ export const getComments = async article_id => {
   return data.comments;
 };
 
-export const postComment = async (article_id, body, user) => {
+export const postComment = async (article_id, body, author) => {
   const { data } = await axios.post(
-    `${BASE_URL}/articles/${article_id}/comments`
+    `${BASE_URL}/articles/${article_id}/comments`,
+    { body, author: "jessjelly" }
   );
-  return data;
+  console.log(data);
+  return data.body;
+};
+
+export const vote = async (id, inc_votes, section) => {
+  const { data } = await axios.patch(`${BASE_URL}/${section}/${id}`, {
+    inc_votes
+  });
+  return data.article;
 };

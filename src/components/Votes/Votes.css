@@ -1,0 +1,14 @@
+.poll {
+  display: grid;
+  grid-template-columns: 2em auto;
+}
+.voteButton {
+  color: #cd4303;
+  margin: 0;
+  padding: 0;
+}
+
+#voteNum {
+  font-size: 1em;
+  margin: 0;
+}
