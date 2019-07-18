@@ -3,8 +3,10 @@ import React from "react";
 const Error = () => {
   return (
     <div>
-      <p>Oops!</p>
-      <p>{this.props.location.state.message}</p>
+      <p>Ooops!</p>
+      {/* {props.location.state.message && props.location.state && (
+        <p>props.location.state.message</p>
+      )} */}
     </div>
   );
 };

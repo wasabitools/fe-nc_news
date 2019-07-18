@@ -4,14 +4,14 @@ import "./Slogin.css";
 const Slogin = (username, password) => {
   return (
     <section className="slogin">
-      <button
+      <p
         id="login"
         type="submit"
         // onClick={this.handleLogIn}
         // value={this.state.user}
       >
-        Login
-      </button>
+        You are logged in as 'jessjelly'
+      </p>
       {/* <span>/</span>
       <button id="signup">Sign up</button> */}
     </section>

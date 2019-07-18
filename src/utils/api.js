@@ -47,12 +47,10 @@ export const vote = async (id, inc_votes, section) => {
   return data.article;
 };
 
-export const deleteComment = async (article_id, body, author) => {
-  const { data } = await axios.delete(
-    `${BASE_URL}/articles/${article_id}/comments?author=${author}`,
-    { body, author }
-  );
-  return data;
+export const deleteComment = async comment_id => {
+  const { data } = await axios.delete(`${BASE_URL}/comments/${comment_id}`);
+  console.log(data.comments, "de");
+  return data.comments;
 };
 
 export const getUser = async user => {

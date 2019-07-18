@@ -57,12 +57,15 @@ label {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .comments {
-    max-width: 50%;
+    max-width: 98%;
   }
 }
 /* iphone 6/7/8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   #id {
     max-width: 20%;
+  }
+  .comments {
+    max-width: 98%;
   }
 }

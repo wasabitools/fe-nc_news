@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
 import { Link } from "@reach/router";
+// import { navigate } from "@reach/router";
 import Votes from "../Votes/Votes";
 import "../Votes/Votes.css";
 import "../Articles/Articles.css";
@@ -10,10 +11,13 @@ class ArticleById extends Component {
   state = {
     article: {},
     comments: [],
-    loading: true
+    loading: true,
+    deleteSuccessful: false,
+    comment_id: ""
   };
   render() {
     const { article, comments, loading } = this.state;
+
     if (loading === true) {
       return <div id="loading">Hold on please!</div>;
     }
@@ -50,6 +54,17 @@ class ArticleById extends Component {
                 >
                   <h5>{comment.votes} Votes</h5>
                 </Votes>
+                {this.props.user === comment.author ? (
+                  <button
+                    id={comment.comment_id}
+                    onClick={() => {
+                      this.handleDelete(comment.comment_id);
+                      console.log(comment.comment_id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                ) : null}
                 <h6>
                   Posted at{" "}
                   {Date(comment.created_at)
@@ -81,6 +96,17 @@ class ArticleById extends Component {
     api.getComments(article_id).then(comments => {
       this.setState({ comments });
     });
+  };
+
+  handleDelete = comment_id => {
+    api
+      .deleteComment(comment_id)
+      .then(comments => {
+        this.setState({ comments: comments });
+      })
+      .then(article_id => {
+        return this.fetchArticleById(article_id);
+      });
   };
 }
 

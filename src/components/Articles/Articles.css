@@ -116,11 +116,15 @@ h6 {
 .votesA {
   display: grid;
   grid-template-columns: 100px auto;
+  transform: 0;
+  transition: 0s;
 }
 
 .votesC {
   display: grid;
   grid-template-columns: 50px;
+  transform: 0;
+  transition: 0s;
 }
 
 /* iphone X */
@@ -136,8 +140,21 @@ h6 {
   }
   .singleBody {
     text-align: justify;
-    margin-left: 5%;
-    margin-right: 5%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+  }
+  .votesA {
+    display: grid;
+    grid-template-columns: 4%;
+    transform: 0;
+    transition: 0s;
+  }
+
+  .votesC {
+    display: grid;
+    grid-template-columns: 4%;
+    transform: 0;
+    transition: 0s;
   }
 }
 /* iphone 6/7/8 */
@@ -153,7 +170,41 @@ h6 {
   }
   .singleBody {
     text-align: justify;
-    margin-left: 5%;
-    margin-right: 5%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  main {
+    font-size: 75%;
+  }
+  .sort select {
+    max-width: 35%;
+  }
+  .singleArticle h2 {
+    font-size: 150%;
+  }
+  .singleBody {
+    text-align: justify;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  main {
+    font-size: 75%;
+  }
+  .sort select {
+    max-width: 35%;
+  }
+  .singleArticle h2 {
+    font-size: 150%;
+  }
+  .singleBody {
+    text-align: justify;
+    /* margin-left: 5%;
+    margin-right: 5%; */
   }
 }

@@ -18,7 +18,7 @@
 .results {
   grid-area: results;
 }
-
+/* iphoneX */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .App {
     height: 98vh;
@@ -34,14 +34,47 @@
     font-size: 60%;
   }
 }
-
+/* iphone 6-7-8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .App {
+    height: 98vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas: "header login" "menu menu" "results results" "footer footer";
+    text-align: justify;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0;
+    font-size: 60%;
+  }
+}
+
+/* ipads  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .App {
     height: 98vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
     grid-template-areas: "header login" "menu menu" "search search" "results results" "footer footer";
+    text-align: justify;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0;
+    font-size: 60%;
+  }
+}
+/* iphone 5 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .App {
+    height: 98vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas: "header login" "menu menu" "results results" "footer footer";
     text-align: justify;
     margin-top: 1%;
     margin-left: 0.5%;

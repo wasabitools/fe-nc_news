@@ -36,7 +36,6 @@ class Votes extends Component {
 
   vote = increment => {
     const { id, section } = this.props;
-    console.log(section);
     api.vote(id, increment, section).catch(err => {
       this.setState(state => ({ voteChange: state.voteChange - increment }));
     });

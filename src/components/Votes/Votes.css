@@ -1,14 +1,107 @@
 .poll {
   display: grid;
   grid-template-columns: 2em auto;
+  transition: none;
 }
 .voteButton {
   color: #cd4303;
   margin: 0;
   padding: 0;
+  transition: none;
+  transform: none;
 }
 
 #voteNum {
   font-size: 1em;
   margin: 0;
+  transition: none;
+  transform: none;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .poll {
+    display: grid;
+    grid-template-columns: 1em auto;
+    transition: none;
+  }
+  .voteButton {
+    color: #cd4303;
+    margin: 0;
+    padding: 0;
+    transition: none;
+    transform: none;
+  }
+
+  #voteNum {
+    font-size: 1em;
+    margin: 0;
+    transition: none;
+    transform: none;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .poll {
+    display: grid;
+    grid-template-columns: 1em auto;
+    transition: none;
+  }
+  .voteButton {
+    color: #cd4303;
+    margin: 0;
+    padding: 0;
+    transition: none;
+    transform: none;
+  }
+
+  #voteNum {
+    font-size: 1em;
+    margin: 0;
+    transition: none;
+    transform: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .poll {
+    display: grid;
+    grid-template-columns: 1em auto;
+    transition: none;
+  }
+  .voteButton {
+    color: #cd4303;
+    margin: 0;
+    padding: 0;
+    transition: none;
+    transform: none;
+  }
+
+  #voteNum {
+    font-size: 1em;
+    margin: 0;
+    transition: none;
+    transform: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .poll {
+    display: grid;
+    grid-template-columns: 1em auto;
+    transition: none;
+  }
+  .voteButton {
+    color: #cd4303;
+    margin: 0;
+    padding: 0;
+    transition: none;
+    transform: none;
+  }
+
+  #voteNum {
+    font-size: 1em;
+    margin: 0;
+    transition: none;
+    transform: none;
+  }
 }

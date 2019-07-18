@@ -1,3 +1,11 @@
+Fullstack project for the Northcoders coding bootcamp.
+
+The back-end code can be found here: https://github.com/natasafi/be-nc-news
+
+The hoisted back-end version can be found here: https://bend-natasafi-nc-news.herokuapp.com/api
+
+The deployed front-end version can be found here: https://ncnews-natasafi.netlify.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
