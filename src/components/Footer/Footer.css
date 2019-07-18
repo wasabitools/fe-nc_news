@@ -28,3 +28,21 @@
 .footer h6 a:visited {
   color: #cd4303;
 }
+
+/* Iphone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .footer {
+    grid-area: footer;
+    font-size: 50%;
+    grid-template-rows: 5% auto;
+  }
+}
+/* Iphone 6-7-8 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .footer {
+    grid-area: footer;
+    font-size: 20%;
+    grid-template-rows: 5% auto;
+  }
+}

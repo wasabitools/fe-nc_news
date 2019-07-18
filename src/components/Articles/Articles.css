@@ -101,9 +101,11 @@ button:hover {
   font-size: 1.3em;
   margin: 0;
 }
-/* .votes h5 {
-  margin: 0;
-} */
+#loading {
+  font-size: 1.3em;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+}
 
 h6 {
   margin: 0;
@@ -119,4 +121,39 @@ h6 {
 .votesC {
   display: grid;
   grid-template-columns: 50px;
+}
+
+/* iphone X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  main {
+    font-size: 175%;
+  }
+  .sort select {
+    max-width: 35%;
+  }
+  .singleArticle h2 {
+    font-size: 150%;
+  }
+  .singleBody {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+/* iphone 6/7/8 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  main {
+    font-size: 75%;
+  }
+  .sort select {
+    max-width: 35%;
+  }
+  .singleArticle h2 {
+    font-size: 150%;
+  }
+  .singleBody {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

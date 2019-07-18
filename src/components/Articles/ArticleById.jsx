@@ -9,18 +9,13 @@ import "../Comments/Comments.css";
 class ArticleById extends Component {
   state = {
     article: {},
-    // title: "",
-    // body: "",
-    // author: "",
-    // comment_count: "",
-    // votes: "",
     comments: [],
     loading: true
   };
   render() {
     const { article, comments, loading } = this.state;
     if (loading === true) {
-      return <div>Hold on please!</div>;
+      return <div id="loading">Hold on please!</div>;
     }
     return (
       <div className="singleArticle">

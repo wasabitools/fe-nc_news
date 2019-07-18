@@ -9,16 +9,17 @@ import Slogin from "./components/Slogin/Slogin";
 import Articles from "./components/Articles/Articles";
 import ArticleById from "./components/Articles/ArticleById";
 import CommentAdder from "./components/Comments/CommentAdder";
+import CommentRemover from "./components/Comments/CommentRemover";
 import Error from "./components/Error";
 import * as api from "./utils/api";
 
 class App extends Component {
   state = {
     topics: [],
-    search: ""
+    user: "jessjelly"
   };
   render() {
-    const { topics } = this.state;
+    const { topics, user } = this.state;
     return (
       <div className="App">
         <Header />
@@ -28,7 +29,11 @@ class App extends Component {
           <Articles path="/" />
           <Articles path="/topics/:topic/" />
           <ArticleById path="/articles/:article_id" />
-          <CommentAdder path="/articles/:article_id/newComment" />
+          <CommentAdder path="/articles/:article_id/newComment" user={user} />
+          <CommentRemover
+            path="/articles/:article_id/deleteComment"
+            user={user}
+          />
           <Error path="/error" />
         </Router>
         <Slogin />
@@ -38,10 +43,17 @@ class App extends Component {
   }
   componentDidMount() {
     this.fetchTopics();
+    this.setUser();
   }
   fetchTopics = () => {
     api.getTopics().then(topics => {
       this.setState({ topics });
+    });
+  };
+
+  setUser = user => {
+    api.getUser().then(user => {
+      this.setState({ user });
     });
   };
 }

@@ -8,3 +8,19 @@
   border-bottom: solid 0.5px #cd4303;
   padding-left: 3%;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .header {
+    grid-area: header;
+    font-size: 35%;
+    margin-top: 1%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .header {
+    grid-area: header;
+    font-size: 30%;
+    margin-top: 1%;
+  }
+}

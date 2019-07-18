@@ -6,6 +6,7 @@ import * as api from "../../utils/api";
 class Articles extends Component {
   state = {
     articles: [],
+    userLoggedIn: true,
     sort_by: ("created_at", "votes", "comment_count")
   };
   render() {

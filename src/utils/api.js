@@ -46,3 +46,16 @@ export const vote = async (id, inc_votes, section) => {
   });
   return data.article;
 };
+
+export const deleteComment = async (article_id, body, author) => {
+  const { data } = await axios.delete(
+    `${BASE_URL}/articles/${article_id}/comments?author=${author}`,
+    { body, author }
+  );
+  return data;
+};
+
+export const getUser = async user => {
+  const { data } = await axios.get(`${BASE_URL}/users/jessjelly`);
+  return data.user;
+};
