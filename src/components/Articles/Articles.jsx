@@ -2,6 +2,7 @@ import "./Articles.css";
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../../utils/api";
+import { formatDate } from "../../utils/utils";
 
 class Articles extends Component {
   state = {
@@ -28,10 +29,7 @@ class Articles extends Component {
               <Link id="articleLink" to={`/articles/${article.article_id}`}>
                 <h3 key={article.article_id}>{article.title}</h3>
                 <p>nc/{article.author}</p>
-                <p>
-                  Posted at{" "}
-                  {new Date(article.created_at).toString().slice(0, 24)}
-                </p>
+                <p>Posted at {formatDate(article.created_at)}</p>
               </Link>
             </div>
           );

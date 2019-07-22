@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
 import { Link } from "@reach/router";
-// import { navigate } from "@reach/router";
 import Votes from "../Votes/Votes";
 import "../Votes/Votes.css";
 import "../Articles/Articles.css";
 import "../Comments/Comments.css";
+import { formatDate } from "../../utils/utils";
 
 class ArticleById extends Component {
   state = {
@@ -64,10 +64,7 @@ class ArticleById extends Component {
                     Delete
                   </button>
                 ) : null}
-                <h6>
-                  Posted at{" "}
-                  {new Date(comment.created_at).toString().slice(0, 24)}
-                </h6>
+                <h6>Posted at {formatDate(comment.created_at)}</h6>
               </div>
             );
           })}
