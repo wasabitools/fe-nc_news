@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
-import { Link } from "@reach/router";
+import { Link,navigate } from "@reach/router";
 import Votes from "../Votes/Votes";
 import "../Votes/Votes.css";
 import "../Articles/Articles.css";
@@ -82,14 +82,30 @@ class ArticleById extends Component {
     const { article_id } = this.props;
     api.getArticleById(article_id).then(article => {
       this.setState({ article, loading: false });
-    });
+    }).catch(err => {
+        navigate("/error", {
+          replace: true,
+          state: {
+            code: err.code,
+            message: err.message
+          }
+        });
+      });
   };
 
   fetchComments = () => {
     const { article_id } = this.props;
     api.getComments(article_id).then(comments => {
       this.setState({ comments });
-    });
+    }).catch(err => {
+        navigate("/error", {
+          replace: true,
+          state: {
+            code: err.code,
+            message: err.message
+          }
+        });
+      });
   };
 
   handleDelete = comment_id => {

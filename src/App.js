@@ -8,7 +8,7 @@ import Slogin from "./components/Slogin/Slogin";
 import Articles from "./components/Articles/Articles";
 import ArticleById from "./components/Articles/ArticleById";
 import CommentAdder from "./components/Comments/CommentAdder";
-import Error from "./components/Error";
+import Error from "./components/Error/Error";
 import * as api from "./utils/api";
 
 class App extends Component {
