@@ -7,15 +7,12 @@
   color: #cd4303;
   margin: 0;
   padding: 0;
-  transition: none;
-  transform: none;
+  border: solid 0.5px #a1a4b2;
 }
 
 #voteNum {
   font-size: 1em;
   margin: 0;
-  transition: none;
-  transform: none;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
@@ -28,15 +25,12 @@
     color: #cd4303;
     margin: 0;
     padding: 0;
-    transition: none;
-    transform: none;
+    border: solid 0.5px #a1a4b2;
   }
 
   #voteNum {
     font-size: 1em;
     margin: 0;
-    transition: none;
-    transform: none;
   }
 }
 
@@ -50,15 +44,12 @@
     color: #cd4303;
     margin: 0;
     padding: 0;
-    transition: none;
-    transform: none;
+    border: solid 0.5px #a1a4b2;
   }
 
   #voteNum {
     font-size: 1em;
     margin: 0;
-    transition: none;
-    transform: none;
   }
 }
 
@@ -72,15 +63,12 @@
     color: #cd4303;
     margin: 0;
     padding: 0;
-    transition: none;
-    transform: none;
+    border: solid 0.5px #a1a4b2;
   }
 
   #voteNum {
     font-size: 1em;
     margin: 0;
-    transition: none;
-    transform: none;
   }
 }
 
@@ -94,14 +82,11 @@
     color: #cd4303;
     margin: 0;
     padding: 0;
-    transition: none;
-    transform: none;
+    border: solid 0.5px #a1a4b2;
   }
 
   #voteNum {
     font-size: 1em;
     margin: 0;
-    transition: none;
-    transform: none;
   }
 }

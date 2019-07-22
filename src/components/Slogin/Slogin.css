@@ -7,43 +7,36 @@
   color: #e3e3e3;
   border-bottom: solid 0.5px #cd4303;
 }
-
+/* iphone X */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .slogin p {
     grid-area: login;
     text-align: right;
-    margin: 0;
-    padding-bottom: 2%;
-    border-bottom: solid 0.5px #cd4303;
+    border-bottom: 0;
   }
 }
 
+/* iphone 6/7/8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .slogin p {
     grid-area: login;
     text-align: right;
-    margin: 0;
-    padding-bottom: 2%;
-    border-bottom: solid 0.5px #cd4303;
+    border-bottom: 0;
   }
 }
-
+/* iphone 5 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .slogin p {
     grid-area: login;
     text-align: right;
-    margin: 0;
-    padding-bottom: 2%;
-    border-bottom: solid 0.5px #cd4303;
+    border-bottom: 0;
   }
 }
-
+/* ipad */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .slogin p {
     grid-area: login;
     text-align: right;
-    margin: 0;
-    padding-bottom: 2%;
-    border-bottom: solid 0.5px #cd4303;
+    border-bottom: 0;
   }
 }

@@ -10,33 +10,37 @@
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .header {
+  .header h1 {
     grid-area: header;
-    font-size: 35%;
+    font-size: 150%;
     margin-top: 1%;
+    border-bottom: 0;
   }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  .header {
+  .header h1 {
     grid-area: header;
-    font-size: 30%;
+    font-size: 150%;
     margin-top: 1%;
+    border-bottom: 0;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .header {
+  .header h1 {
     grid-area: header;
-    font-size: 35%;
+    font-size: 155%;
     margin-top: 1%;
+    border-bottom: 0;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  .header {
+  .header h1 {
     grid-area: header;
-    font-size: 50%;
+    font-size: 150%;
     margin-top: 1%;
+    border-bottom: 0;
   }
 }
