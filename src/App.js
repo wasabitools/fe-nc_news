@@ -27,7 +27,7 @@ class App extends Component {
           <Articles path="/topics/:topic/" />
           <ArticleById path="/articles/:article_id" user={user} />
           <CommentAdder path="/articles/:article_id/newComment" user={user} />
-          <Error path="/error" />
+          <Error default path="/error" />
         </Router>
         <Slogin />
         <Footer />

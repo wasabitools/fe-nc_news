@@ -67,9 +67,7 @@ class ArticleById extends Component {
                 ) : null}
                 <h6>
                   Posted at{" "}
-                  {Date(comment.created_at)
-                    .toString()
-                    .slice(0, 24)}
+                  {new Date(comment.created_at).toString().slice(0, 24)}
                 </h6>
               </div>
             );
@@ -102,7 +100,11 @@ class ArticleById extends Component {
     api
       .deleteComment(comment_id)
       .then(comments => {
-        this.setState({ comments: comments });
+        this.setState({
+          comments: this.state.comments.filter(comment => {
+            return comment.comment_id !== comment_id;
+          })
+        });
       })
       .then(article_id => {
         return this.fetchArticleById(article_id);

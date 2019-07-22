@@ -36,7 +36,6 @@ export const postComment = async (article_id, body, author) => {
     { body, username: author },
     "jessjelly"
   );
-  console.log(data);
   return data.comment;
 };
 
@@ -49,7 +48,7 @@ export const vote = async (id, inc_votes, section) => {
 
 export const deleteComment = async comment_id => {
   const { data } = await axios.delete(`${BASE_URL}/comments/${comment_id}`);
-  console.log(data.comments, "de");
+
   return data.comments;
 };
 

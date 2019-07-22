@@ -9,7 +9,6 @@ class CommentPage extends Component {
     const {
       comment: { body }
     } = this.state;
-    console.log(this.props.location.state);
 
     return (
       <div>
