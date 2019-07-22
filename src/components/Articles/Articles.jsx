@@ -7,7 +7,7 @@ class Articles extends Component {
   state = {
     articles: [],
     userLoggedIn: true,
-    sort_by: ("created_at", "votes", "comment_count")
+    sort_by: "created_at"
   };
   render() {
     const { topic } = this.props;

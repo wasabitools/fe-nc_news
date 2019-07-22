@@ -41,14 +41,12 @@ button {
   font-family: "Quattrocento Sans", sans-serif;
   font-weight: 800;
   font-size: 1em;
-  margin-top: 2%;
-  margin-left: 1%;
+
   border-radius: 25%;
 }
 button:hover {
   transform: scale(1.1);
   transition: 1s;
-  background-color: #a1a4b2;
 }
 .articleList {
   overflow-y: scroll;
@@ -116,15 +114,17 @@ h6 {
 .votesA {
   display: grid;
   grid-template-columns: 100px auto;
-  transform: 0;
-  transition: 0s;
+  transform: scale(1.1);
+  transition: 1s;
+  border: solid 0.5px #a1a4b2;
 }
 
 .votesC {
   display: grid;
   grid-template-columns: 50px;
-  transform: 0;
-  transition: 0s;
+  transform: scale(1.1);
+  transition: 1s;
+  border: solid 0.5px #a1a4b2;
 }
 
 /* iphone X */

@@ -59,7 +59,6 @@ class ArticleById extends Component {
                     id={comment.comment_id}
                     onClick={() => {
                       this.handleDelete(comment.comment_id);
-                      console.log(comment.comment_id);
                     }}
                   >
                     Delete
