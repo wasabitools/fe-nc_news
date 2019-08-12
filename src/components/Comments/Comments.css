@@ -38,6 +38,7 @@
 }
 
 label {
+  padding-right: 1%;
   color: #373940;
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 1.3em;
@@ -52,6 +53,7 @@ label {
 
 #post {
   padding-top: 5%;
+  margin-left: 1%;
   font-size: 1.3em;
   font-family: "Quattrocento Sans", sans-serif;
 }
