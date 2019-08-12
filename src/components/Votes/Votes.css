@@ -1,31 +1,34 @@
 .poll {
   display: grid;
-  grid-template-columns: 2em auto;
+  grid-template-columns: 1em auto;
   transition: none;
 }
 .voteButton {
   color: #cd4303;
   margin: 0;
-  padding: 0;
-  border: solid 0.5px #a1a4b2;
+  padding: 1%;
+  padding-bottom: 4%;
+  margin-bottom: 3%;
+  font-size: 1.5em;
 }
 
 #voteNum {
+  padding-top: 1%;
+  text-align: left;
   font-size: 1em;
   margin: 0;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .poll {
-    display: grid;
+    display: flex;
     grid-template-columns: 1em auto;
     transition: none;
   }
   .voteButton {
     color: #cd4303;
     margin: 0;
-    padding: 0;
-    border: solid 0.5px #a1a4b2;
+    padding: 1%;
   }
 
   #voteNum {
@@ -36,15 +39,15 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .poll {
-    display: grid;
+    display: flex;
     grid-template-columns: 1em auto;
     transition: none;
   }
   .voteButton {
     color: #cd4303;
     margin: 0;
-    padding: 0;
-    border: solid 0.5px #a1a4b2;
+    padding: 1%;
+    font-size: 1.5em;
   }
 
   #voteNum {
@@ -55,7 +58,7 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .poll {
-    display: grid;
+    display: flex;
     grid-template-columns: 1em auto;
     transition: none;
   }
@@ -63,26 +66,30 @@
     color: #cd4303;
     margin: 0;
     padding: 0;
-    border: solid 0.5px #a1a4b2;
+    font-size: 1.5em;
   }
 
   #voteNum {
-    font-size: 1em;
-    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: 0;
+    padding-left: 0;
+    align-self: center;
+    text-align: center;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .poll {
-    display: grid;
+    display: flex;
     grid-template-columns: 1em auto;
     transition: none;
   }
   .voteButton {
     color: #cd4303;
     margin: 0;
-    padding: 0;
-    border: solid 0.5px #a1a4b2;
+    padding: 1%;
+    font-size: 1.5em;
   }
 
   #voteNum {

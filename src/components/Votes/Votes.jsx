@@ -21,7 +21,10 @@ class Votes extends Component {
         >
           +
         </button>
-        <p id="voteNum">{votes + voteChange}</p>
+        <div>
+          <p id="voteNum">{votes + voteChange} Votes</p>
+        </div>
+
         <button
           className="voteButton"
           onClick={() => {
@@ -34,12 +37,12 @@ class Votes extends Component {
     );
   }
 
-  vote = increment => {
+  vote = (increment) => {
     const { id, section } = this.props;
-    api.vote(id, increment, section).catch(err => {
-      this.setState(state => ({ voteChange: state.voteChange - increment }));
+    api.vote(id, increment, section).catch((err) => {
+      this.setState((state) => ({ voteChange: state.voteChange - increment }));
     });
-    this.setState(state => ({ voteChange: state.voteChange + increment }));
+    this.setState((state) => ({ voteChange: state.voteChange + increment }));
   };
 }
 Votes.propTypes = {

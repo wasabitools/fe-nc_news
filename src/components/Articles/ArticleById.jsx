@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
-import { Link,navigate } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import Votes from "../Votes/Votes";
 import "../Votes/Votes.css";
 import "../Articles/Articles.css";
@@ -35,11 +35,13 @@ class ArticleById extends Component {
           <h5 className="votes">{article.votes}</h5>
         </Votes>
         <Link to={`/articles/${article.article_id}/newComment`}>
-          <button id="postCommbutton">Post a comment</button>
+          <div>
+            <button id="postCommbutton">Post a comment</button>
+          </div>
         </Link>
         <h6>{article.comment_count} Comments</h6>
         <section>
-          {comments.map(comment => {
+          {comments.map((comment) => {
             return (
               <div className="comments" key={comment.comment_id}>
                 <h4 key={comment.comment_id}>
@@ -80,9 +82,12 @@ class ArticleById extends Component {
 
   fetchArticleById = () => {
     const { article_id } = this.props;
-    api.getArticleById(article_id).then(article => {
-      this.setState({ article, loading: false });
-    }).catch(err => {
+    api
+      .getArticleById(article_id)
+      .then((article) => {
+        this.setState({ article, loading: false });
+      })
+      .catch((err) => {
         navigate("/error", {
           replace: true,
           state: {
@@ -95,9 +100,12 @@ class ArticleById extends Component {
 
   fetchComments = () => {
     const { article_id } = this.props;
-    api.getComments(article_id).then(comments => {
-      this.setState({ comments });
-    }).catch(err => {
+    api
+      .getComments(article_id)
+      .then((comments) => {
+        this.setState({ comments });
+      })
+      .catch((err) => {
         navigate("/error", {
           replace: true,
           state: {
@@ -108,17 +116,17 @@ class ArticleById extends Component {
       });
   };
 
-  handleDelete = comment_id => {
+  handleDelete = (comment_id) => {
     api
       .deleteComment(comment_id)
-      .then(comments => {
+      .then((comments) => {
         this.setState({
-          comments: this.state.comments.filter(comment => {
+          comments: this.state.comments.filter((comment) => {
             return comment.comment_id !== comment_id;
           })
         });
       })
-      .then(article_id => {
+      .then((article_id) => {
         return this.fetchArticleById(article_id);
       });
   };

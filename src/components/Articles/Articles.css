@@ -7,6 +7,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
+  padding-top: 5%;
 }
 
 h2 {
@@ -32,6 +33,17 @@ h2 {
 .sort option:hover {
   background-color: #cd4303;
 }
+#postCommbutton {
+  border: none;
+  background-color: #f9ffff;
+  cursor: pointer;
+  color: #373940;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  margin: 0;
+  padding-bottom: 15%;
+}
 
 button {
   border: none;
@@ -41,13 +53,9 @@ button {
   font-family: "Quattrocento Sans", sans-serif;
   font-weight: 800;
   font-size: 1em;
+  margin-top: 2%;
+}
 
-  border-radius: 25%;
-}
-button:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
 .articleList {
   overflow-y: scroll;
 }
@@ -87,6 +95,9 @@ button:hover {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-top: 8%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 .singleArticle h4 {
   margin: 0.5%;
@@ -99,6 +110,10 @@ button:hover {
   font-size: 1.3em;
   margin: 0;
 }
+.singleBody {
+  text-align: justify;
+}
+
 #loading {
   font-size: 1.3em;
   color: #373940;
@@ -110,21 +125,13 @@ h6 {
   font-size: 1em;
   text-align: left;
 }
-
-.votesA {
-  display: grid;
-  grid-template-columns: 100px auto;
-  transform: scale(1.1);
-  transition: 1s;
-  border: solid 0.5px #a1a4b2;
+.votes h5 {
+  text-align: center;
 }
-
-.votesC {
-  display: grid;
-  grid-template-columns: 50px;
-  transform: scale(1.1);
-  transition: 1s;
-  border: solid 0.5px #a1a4b2;
+.votesA .votesC {
+  display: flex;
+  grid-template-rows: 100px auto;
+  padding-bottom: 2%;
 }
 
 /* iphone X */
@@ -141,18 +148,9 @@ h6 {
   .singleBody {
     text-align: justify;
   }
-  .votesA {
-    display: grid;
-    grid-template-columns: 4%;
-    transform: 0;
-    transition: 0s;
-  }
-
-  .votesC {
-    display: grid;
-    grid-template-columns: 4%;
-    transform: 0;
-    transition: 0s;
+  .votesA .votesC {
+    display: flex;
+    grid-template-rows: 100px auto;
   }
 }
 /* iphone 6/7/8 */
