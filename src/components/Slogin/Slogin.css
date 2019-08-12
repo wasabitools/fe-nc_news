@@ -1,11 +1,16 @@
+.slogin {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .slogin p {
   grid-area: login;
   text-align: right;
   margin: 0;
   margin-top: 1%;
   padding-bottom: 3.2%;
-  color: #e3e3e3;
-  border-bottom: solid 0.5px #cd4303;
+  color: #908b8b;
+  padding-right: 1%;
 }
 /* iphone X */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {

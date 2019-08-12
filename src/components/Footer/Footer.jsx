@@ -10,7 +10,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Nortchoders{" "}
+          Northcoders{" "}
         </a>
         2019©
       </h5>

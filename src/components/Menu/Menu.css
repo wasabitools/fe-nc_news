@@ -3,6 +3,11 @@
   text-align: center;
   margin: 0;
   padding-left: 3%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  position: fixed;
+  /* top: 0; */
+  width: 100%;
 }
 .link {
   color: #373940;
